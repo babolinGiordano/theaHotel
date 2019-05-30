@@ -9,6 +9,7 @@ import { CelebrationsComponent } from './celebrations/celebrations.component';
 import { AccomodationComponent } from './accomodation/accomodation.component';
 import { WeddingsComponent } from './weddings/weddings.component';
 import { SigninComponent } from './auth/signin/signin.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
    { path: 'accomodation', component: AccomodationComponent },
@@ -18,11 +19,12 @@ const routes: Routes = [
    { path: 'offers', component: OffersComponent },
    { path: 'weddings', component: WeddingsComponent },
    { path: 'signin', component: SigninComponent },
-   { path: 'signup', component: SignupComponent }
+   { path: 'signup', component: SignupComponent },
+   { path: '', component: HomeComponent }
 ];
 
 @NgModule({
-   imports: [RouterModule.forRoot(routes, { enableTracing: true })],
+   imports: [RouterModule.forRoot(routes)],
    exports: [RouterModule]
 })
 export class AppRoutingModule { }
